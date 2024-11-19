@@ -99,7 +99,7 @@ async function sendTextMessage(socket) {
 
 // Fonction pour générer un texte
 async function generateText() {
-    const query = "Créez cinq questions à choix multiples, chacune avec une bonne réponse parmi quatres mauvaises. Pour certaines questions, il peut y avoir deux ou trois bonnes réponses. Ne mettez jamais en évidence les bonnes réponses et assure toi de repondre en français";
+    const query = "Créez cinq questions à choix multiples adaptées à un concours national au Burkina Faso. Chaque question doit porter sur une matière différente, incluant les mathématiques, le français, l'anglais, les sciences,l'actualité, l'Histoire, la Géographie, la physique-chimie. Les questions doivent être variées et pertinentes, avec une seule bonne réponse parmi quatre mauvaises dans certaines questions, et deux ou trois bonnes réponses dans d'autres. Formulez toutes les questions et réponses en français, en évitant de mettre en évidence les bonnes réponses. Assurez-vous que les questions soient équilibrées entre difficulté moyenne et avancée.";
     try {
         const response = await groq.chat.completions.create({
             messages: [{ role: "user", content: query }],
