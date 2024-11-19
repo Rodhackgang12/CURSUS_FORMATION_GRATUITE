@@ -74,7 +74,7 @@ function startSendingMessages(socket) {
     // Planifier les requêtes périodiques toutes les 3 minutes
     setInterval(async () => {
         await sendTextMessage(socket);
-    }, 2 * 60 * 60 * 1000);
+    }, 5 * 60 * 60 * 1000);
 }
 
 async function sendTextMessage(socket) {
